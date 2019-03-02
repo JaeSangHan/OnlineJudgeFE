@@ -111,7 +111,7 @@
     },
     computed: {
       ...mapGetters(['website', 'modalStatus', 'user', 'isAuthenticated', 'isAdminRole']),
-      // 跟随路由变化
+      // 跟随�?��?�化
       activeMenu () {
         return '/' + this.$route.path.split('/')[1]
       },
