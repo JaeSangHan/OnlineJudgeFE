@@ -1,9 +1,9 @@
 export const m = {
   // SideMenu.vue
-  Dashboard: 'Dashboard',
-  General: 'General',
-  User: 'User',
-  Announcement: 'Announcement',
+  Dashboard: '대시보드',
+  General: '일반l',
+  User: '사용자',
+  Announcement: '공지사항',
   System_Config: 'System Config',
   Judge_Server: 'Judge Server',
   Prune_Test_Case: 'Prune Test Case',
