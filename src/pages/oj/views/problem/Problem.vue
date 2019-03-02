@@ -93,8 +93,8 @@
             <Button type="warning" icon="edit" :loading="submitting" @click="submitCode"
                     :disabled="problemSubmitDisabled || submitted"
                     class="fl-right">
-              <span v-if="submitting">Submitting</span>
-              <span v-else>Submit</span>
+              <span v-if="submitting">제출중</span>
+              <span v-else>제출</span>
             </Button>
           </Col>
         </Row>

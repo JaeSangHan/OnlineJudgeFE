@@ -1,4 +1,4 @@
-<template>
+ï»¿<template>
   <Panel shadow :padding="10">
     <div slot="title">
       {{title}}
@@ -103,7 +103,7 @@
     computed: {
       title () {
         if (this.listVisible) {
-          return this.isContest ? '´ëÈ¸ °øÁö»çÇ×' : '°øÁö»çÇ×'
+          return this.isContest ? 'ëŒ€íšŒ ê³µì§€ì‚¬í•­' : 'ê³µì§€ì‚¬í•­'
         } else {
           return this.announcement.title
         }
