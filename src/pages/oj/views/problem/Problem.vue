@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="flex-container">
     <div id="problem-main">
       <!--problem main-->
@@ -67,17 +67,17 @@
                 </Tag>
               </template>
               <template v-else-if="this.contestID && !OIContestRealTimePermission">
-                <Alert type="success" show-icon>Submitted successfully</Alert>
+                <Alert type="success" show-icon>성공적으로 제출되었습니다</Alert>
               </template>
             </div>
             <div v-else-if="problem.my_status === 0">
-              <Alert type="success" show-icon>You have solved the problem</Alert>
+              <Alert type="success" show-icon>이미 푼 문제입니다</Alert>
             </div>
             <div v-else-if="this.contestID && !OIContestRealTimePermission && submissionExists">
-              <Alert type="success" show-icon>You have submitted a solution.</Alert>
+              <Alert type="success" show-icon>풀이를 제출했습니다</Alert>
             </div>
             <div v-if="contestEnded">
-              <Alert type="warning" show-icon>Contest has ended</Alert>
+              <Alert type="warning" show-icon>대회가 종료되었습니다</Alert>
             </div>
           </Col>
 
