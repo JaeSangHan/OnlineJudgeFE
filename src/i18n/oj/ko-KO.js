@@ -1,4 +1,4 @@
-export const m = {
+﻿export const m = {
   // Problem.vue
   Description: 'Description',
   Input: 'Input',
@@ -39,7 +39,7 @@ export const m = {
   Problems_List: 'Problems List',
 
   // NavBar.vue
-  Home: 'Ȩ',
+  Home: '홈',
   NavProblems: 'Problems',
   Contests: 'Contests',
   NavStatus: 'Status',
