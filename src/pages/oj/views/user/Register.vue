@@ -1,4 +1,4 @@
-﻿<template>
+<template>
 <div>
     <Form ref="formRegister" :model="formRegister" :rules="ruleRegister">
       <FormItem prop="username">
@@ -143,7 +143,7 @@
           delete formData['passwordAgain']
           this.btnRegisterLoading = true
           api.register(formData).then(res => {
-            this.$success('가입해주셔서 감사합니다. 지금 바로 로그인해보세요!')
+            this.$success('Thanks for your registering, you can login now')
             this.switchMode('login')
             this.btnRegisterLoading = false
           }, _ => {
