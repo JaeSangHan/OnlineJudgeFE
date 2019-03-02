@@ -1,4 +1,4 @@
-<template>
+ï»¿<template>
   <div>
     <NavBar></NavBar>
     <div class="content-app">
@@ -7,7 +7,7 @@
       </transition>
       <div class="footer">
         <p v-html="website.website_footer"></p>
-        <p>Powered by <a href="https://jaesanghan.github.io/My-portfolio/">ÇÑÀç»ó</a>
+        <p>Powered by <a href="https://jaesanghan.github.io/My-portfolio/">í•œì¬ìƒ</a>
           <span v-if="version">&nbsp; Version: {{ version }}</span>
         </p>
       </div>
