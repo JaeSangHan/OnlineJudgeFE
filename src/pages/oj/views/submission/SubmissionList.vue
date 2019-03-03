@@ -266,7 +266,7 @@
                   this.handleRejudge(params.row.id, params.index)
                 }
               }
-            }, 'Rejudge')
+            }, '재채점')
           }
         }
         this.columns.push(judgeColumn)
