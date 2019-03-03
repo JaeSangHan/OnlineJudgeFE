@@ -97,8 +97,8 @@ export const RULE_TYPE = {
 }
 
 export const CONTEST_TYPE = {
-  PUBLIC: 'Public',
-  PRIVATE: 'Password Protected'
+  PUBLIC: '공개',
+  PRIVATE: '패스워드'
 }
 
 export const USER_TYPE = {

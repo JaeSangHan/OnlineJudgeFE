@@ -37,7 +37,7 @@
             key: 'title'
           },
           {
-            title: '제출횟수',
+            title: '제출',
             key: 'submission_number'
           },
           {

@@ -110,7 +110,7 @@
             }
           },
           {
-            title: 'Title',
+            title: '제목',
             width: 400,
             render: (h, params) => {
               return h('Button', {
@@ -133,7 +133,7 @@
             }
           },
           {
-            title: 'Level',
+            title: '레벨',
             render: (h, params) => {
               let t = params.row.difficulty
               let color = 'blue'

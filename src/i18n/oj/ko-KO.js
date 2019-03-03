@@ -11,7 +11,7 @@
   Information: '정보',
   Time_Limit: '시간 제한',
   Memory_Limit: '메모리 제한',
-  Created: 'Created',
+  Created: '만든이',
   Level: '레벨',
   Score: '점수',
   Tags: '태그',
@@ -33,8 +33,8 @@
   Announcements: '공지사항',
   Submissions: '제출',
   Rankings: '랭킹',
-  Overview: 'Overview',
-  Admin_Helper: 'Admin Helper',
+  Overview: '개요',
+  Admin_Helper: '관리자 전용',
   // ContestProblemList
   Problems_List: '문제 목록',
 
