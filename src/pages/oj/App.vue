@@ -7,7 +7,7 @@
       </transition>
       <div class="footer">
         <p v-html="website.website_footer"></p>
-        <p>Powered by <a href="https://jaesanghan.github.io/My-portfolio/">한재상</a>
+        <p>Powered by <a href="https://jaesanghan.github.io/My-portfolio/">코이 동아리</a>
           <span v-if="version">&nbsp; Version: {{ version }}</span>
         </p>
       </div>
