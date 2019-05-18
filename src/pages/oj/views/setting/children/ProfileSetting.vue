@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="setting-main">
     <div class="section-title">{{$t('m.Avatar_Setting')}}</div>
     <template v-if="!avatarOption.imgSrc">
@@ -31,16 +31,16 @@
           </vueCropper>
         </div>
         <ButtonGroup vertical class="cropper-btn">
-          <Button @click="rotate('left')">
+          <Button @click="돌리기('left')">
             <Icon type="arrow-return-left" size="20"></Icon>
           </Button>
-          <Button @click="rotate('right')">
+          <Button @click="돌리기('right')">
             <Icon type="arrow-return-right" size="20"></Icon>
           </Button>
-          <Button @click="reselect">
+          <Button @click="재선택">
             <Icon type="refresh" size="20"></Icon>
           </Button>
-          <Button @click="finishCrop">
+          <Button @click="크롭 마치기">
             <Icon type="checkmark-round" size="20"></Icon>
           </Button>
         </ButtonGroup>
@@ -66,16 +66,16 @@
     <Form ref="formProfile" :model="formProfile">
       <Row type="flex" :gutter="30" justify="space-around">
         <Col :span="11">
-          <FormItem label="Real Name">
+          <FormItem label="실명">
             <Input v-model="formProfile.real_name"/>
           </FormItem>
-          <Form-item label="School">
+          <Form-item label="학교">
             <Input v-model="formProfile.school"/>
           </Form-item>
-          <Form-item label="Major">
+          <Form-item label="전공">
             <Input v-model="formProfile.major"/>
           </Form-item>
-          <FormItem label="Language">
+          <FormItem label="언어">
             <Select v-model="formProfile.language">
               <Option v-for="lang in languages" :key="lang.value" :value="lang.value">{{lang.label}}</Option>
             </Select>
@@ -86,13 +86,13 @@
         </Col>
 
         <Col :span="11">
-          <Form-item label="Mood">
+          <Form-item label="상태메세지">
             <Input v-model="formProfile.mood"/>
           </Form-item>
-          <Form-item label="Blog">
+          <Form-item label="블로그">
             <Input v-model="formProfile.blog"/>
           </Form-item>
-          <Form-item label="Github">
+          <Form-item label="깃허브">
             <Input v-model="formProfile.github"/>
           </Form-item>
         </Col>

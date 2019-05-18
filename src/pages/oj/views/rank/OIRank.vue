@@ -41,7 +41,7 @@
             }
           },
           {
-            title: 'user',
+            title: '닉네임',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -62,27 +62,27 @@
             }
           },
           {
-            title: 'mood',
+            title: '상태메세지',
             align: 'center',
             key: 'mood'
           },
           {
-            title: 'Score',
+            title: '점수',
             align: 'center',
             key: 'total_score'
           },
           {
-            title: 'AC',
+            title: '정답',
             align: 'center',
             key: 'accepted_number'
           },
           {
-            title: 'Total',
+            title: '제출',
             align: 'center',
             key: 'submission_number'
           },
           {
-            title: 'Rating',
+            title: '정확도',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.getACRate(params.row.accepted_number, params.row.submission_number))
