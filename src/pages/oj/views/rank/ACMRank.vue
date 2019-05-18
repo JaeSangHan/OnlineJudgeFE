@@ -1,8 +1,8 @@
-<template>
+Ôªø<template>
   <Row type="flex" justify="space-around">
     <Col :span="22">
     <Panel :padding="10">
-      <div slot="title">ACM ∑©≈∑ (¿œπ›)</div>
+      <div slot="title">ACM Îû≠ÌÇπ (ÏùºÎ∞ò)</div>
       <div class="echarts">
         <ECharts :options="options" ref="chart" auto-resize></ECharts>
       </div>

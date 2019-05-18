@@ -1,12 +1,12 @@
-<template>
+ï»¿<template>
   <panel>
     <div slot="title">{{$t('m.Frequently_Asked_Questions')}}</div>
     <div class="content markdown-body">
       <ul>
-        <li>ÀÔ·Â°ú Ãâ·ÂÀÌ ¾î¶»°Ô ÀÌ·ç¾îÁöÁÒ?
-          <p>Á¦ÃâÇÑ ÇÁ·Î±×·¥Àº <code>stdin</code>('Ç¥ÁØ ÀÔ·Â')°ú <code>stdout</code>('Ç¥ÁØ Ãâ·Â')À¸·Î Ã³¸®µË´Ï´Ù.
-            ¿¹¸¦ µé¾î, C¾ğ¾îÀÇ <code>scanf</code> ³ª C++ÀÇ <code>cin</code> À» ÅëÇØ Ã¤Á¡¼­¹öÀÇ ÀÔ·ÂÀ» ¹ŞÀ» ¼ö ÀÖ°í, <code>printf</code> ¶Ç´Â <code>cout</code> À» ÅëÇØ Ã¤Á¡¼­¹ö¿¡ Ãâ·Â°ªÀ» º¸³¾ ¼ö ÀÖ½À´Ï´Ù.
-            ¶ÇÇÑ À¯Àú ÇÁ·Î±×·¥Àº ÆÄÀÏÀ» ÀĞ°í ¾µ ¼ö ¾ø½À´Ï´Ù. ±×·¸°Ô µÇ¸é <code>Runtime Error</code> °¡ ¹ß»ıÇÒ °ÍÀÔ´Ï´Ù.
+        <li>ì…ë ¥ê³¼ ì¶œë ¥ì´ ì–´ë–»ê²Œ ì´ë£¨ì–´ì§€ì£ ?
+          <p>ì œì¶œí•œ í”„ë¡œê·¸ë¨ì€ <code>stdin</code>('í‘œì¤€ ì…ë ¥')ê³¼ <code>stdout</code>('í‘œì¤€ ì¶œë ¥')ìœ¼ë¡œ ì²˜ë¦¬ë©ë‹ˆë‹¤.
+            ì˜ˆë¥¼ ë“¤ì–´, Cì–¸ì–´ì˜ <code>scanf</code> ë‚˜ C++ì˜ <code>cin</code> ì„ í†µí•´ ì±„ì ì„œë²„ì˜ ì…ë ¥ì„ ë°›ì„ ìˆ˜ ìˆê³ , <code>printf</code> ë˜ëŠ” <code>cout</code> ì„ í†µí•´ ì±„ì ì„œë²„ì— ì¶œë ¥ê°’ì„ ë³´ë‚¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+            ë˜í•œ ìœ ì € í”„ë¡œê·¸ë¨ì€ íŒŒì¼ì„ ì½ê³  ì“¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ê·¸ë ‡ê²Œ ë˜ë©´ <code>Runtime Error</code> ê°€ ë°œìƒí•  ê²ƒì…ë‹ˆë‹¤.
           </p>
         </li>
         <li>What's the meaning of the submission execution time?
@@ -25,9 +25,9 @@
           <p>There is no presentation error in this oj.The judger will trim the blacks and wraps in your ouput's <b>last</b> line.
             if it's still different with the correct output, the result will be <code>Wrong Answer</code>.</p>
         </li>
-        <li>¾î¶»°Ô ¸¸µé¾ú³ª¿ä?
-          <p>Qingdao Universisty¿¡¼­ ¹èÆ÷ÇÑ ¿Â¶óÀÎÀúÁö ¿ÀÇÂ¼Ò½º¸¦ »ç¿ëÇß½À´Ï´Ù. <a href="https://github.com/QingdaoU/OnlineJudge">(±êÇãºê ¸µÅ©)</a>.
-            ÇöÀç ¾Æ¸¶Á¸ AWSÀÇ EC2 ¼­ºñ½º¸¦ È°¿ëÇØ ¿î¿µ Áß¿¡ ÀÖ½À´Ï´Ù.
+        <li>ì–´ë–»ê²Œ ë§Œë“¤ì—ˆë‚˜ìš”?
+          <p>Qingdao Universistyì—ì„œ ë°°í¬í•œ ì˜¨ë¼ì¸ì €ì§€ ì˜¤í”ˆì†ŒìŠ¤ë¥¼ ì‚¬ìš©í–ˆìŠµë‹ˆë‹¤. <a href="https://github.com/QingdaoU/OnlineJudge">(ê¹ƒí—ˆë¸Œ ë§í¬)</a>.
+            í˜„ì¬ ì•„ë§ˆì¡´ AWSì˜ EC2 ì„œë¹„ìŠ¤ë¥¼ í™œìš©í•´ ìš´ì˜ ì¤‘ì— ìˆìŠµë‹ˆë‹¤.
           </p>
         </li>
       </ul>
