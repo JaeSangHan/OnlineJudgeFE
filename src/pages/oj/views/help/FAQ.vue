@@ -11,6 +11,7 @@
         </li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <li>제출 응답시간이 무슨 뜻이죠??
         <p>코이업은 제출한 프로그램에 대해 여러번의 테스트케이스를 거쳐 채점합니다.
           각각의 테스트 케이스에 대해 제한시간 이내로 채점이 되면, 제출 응답시간은 각각의 테스트케이스에 대해 가장 많은 시간을 소모한 응답시간이 설정됩니다.
@@ -18,11 +19,16 @@
 =======
 =======
 >>>>>>> parent of e27b9f7... Q&A와 자잘한 번역
+=======
+>>>>>>> parent of e27b9f7... Q&A와 자잘한 번역
         <li>What's the meaning of the submission execution time?
         <p>The onlinejudge might test your code multiple times with different input files.
           If your code gives the correct answer within the time limit for each input file, the execution time displayed is the max of the time spent for each test case.
           Otherwise, the execution time will have no sense.
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of e27b9f7... Q&A와 자잘한 번역
+=======
 >>>>>>> parent of e27b9f7... Q&A와 자잘한 번역
 =======
 >>>>>>> parent of e27b9f7... Q&A와 자잘한 번역
