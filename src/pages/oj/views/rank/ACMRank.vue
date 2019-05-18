@@ -42,7 +42,7 @@
             }
           },
           {
-            title: 'user',
+            title: '닉네임',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -63,22 +63,22 @@
             }
           },
           {
-            title: 'mood',
+            title: '상태메세지',
             align: 'center',
             key: 'mood'
           },
           {
-            title: 'AC',
+            title: '정답',
             align: 'center',
             key: 'accepted_number'
           },
           {
-            title: 'Total',
+            title: '제출',
             align: 'center',
             key: 'submission_number'
           },
           {
-            title: 'Rating',
+            title: '정확도',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.getACRate(params.row.accepted_number, params.row.submission_number))
@@ -90,7 +90,7 @@
             trigger: 'axis'
           },
           legend: {
-            data: ['AC', 'Total']
+            data: ['정답', '제출']
           },
           grid: {
             x: '3%',
