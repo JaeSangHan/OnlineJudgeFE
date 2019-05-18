@@ -27,7 +27,7 @@
   Memory_Limit_Exceeded: '메모리 초과입니다.',
   System_Error: '채점 시스템에 오류가 발생했습니다. 관리자에게 문의하세요.',
   // FAQ.vue
-  Frequently_Asked_Questions: '자주 물어보는 질문들',
+  Frequently_Asked_Questions: 'Q&A',
   // ContestDetail.vue
   Problems: '문제',
   Announcements: '공지사항',
