@@ -12,9 +12,9 @@
               </span>
               <Dropdown-menu slot="list">
                 <Dropdown-item name="">전체</Dropdown-item>
-                <Dropdown-item name="Low">쉬움</Dropdown-item>
-                <Dropdown-item name="Mid">보통</Dropdown-item>
-                <Dropdown-item name="High">어려움</Dropdown-item>
+                <Dropdown-item name="쉬움">쉬움</Dropdown-item>
+                <Dropdown-item name="보통">보통</Dropdown-item>
+                <Dropdown-item name="어려움">어려움</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
@@ -137,8 +137,8 @@
             render: (h, params) => {
               let t = params.row.difficulty
               let color = 'blue'
-              if (t === 'Low') color = 'green'
-              else if (t === 'High') color = 'yellow'
+              if (t === '쉬움') color = 'green'
+              else if (t === '어려움') color = 'yellow'
               return h('Tag', {
                 props: {
                   color: color

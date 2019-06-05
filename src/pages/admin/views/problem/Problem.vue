@@ -49,9 +49,9 @@
           <el-col :span="8">
             <el-form-item :label="$t('m.Difficulty')">
               <el-select class="difficulty-select" size="small" :placeholder="$t('m.Difficulty')" v-model="problem.difficulty">
-                <el-option label="쉬움" value="Low"></el-option>
-                <el-option label="보통" value="Mid"></el-option>
-                <el-option label="어려움" value="High"></el-option>
+                <el-option label="쉬움" value="쉬움"></el-option>
+                <el-option label="보통" value="보통"></el-option>
+                <el-option label="어려움" value="어려움"></el-option>
               </el-select>
             </el-form-item>
           </el-col>
@@ -299,7 +299,7 @@
           output_description: '',
           time_limit: 1000,
           memory_limit: 256,
-          difficulty: 'Low',
+          difficulty: '쉬움',
           visible: true,
           tags: [],
           languages: [],
