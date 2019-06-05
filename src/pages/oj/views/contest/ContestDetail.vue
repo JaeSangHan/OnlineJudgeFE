@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="flex-container">
     <div id="contest-main">
       <!--children-->
@@ -95,27 +95,27 @@
         contestPassword: '',
         columns: [
           {
-            title: '시작일',
+            title: 'StartAt',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.start_time))
             }
           },
           {
-            title: '종료일',
+            title: 'EndAt',
             render: (h, params) => {
               return h('span', time.utcToLocal(params.row.end_time))
             }
           },
           {
-            title: '대회유형',
+            title: 'ContestType',
             key: 'contest_type'
           },
           {
-            title: '규칙',
+            title: 'Rule',
             key: 'rule_type'
           },
           {
-            title: '개최자',
+            title: 'Creator',
             render: (h, data) => {
               return h('span', data.row.created_by.username)
             }

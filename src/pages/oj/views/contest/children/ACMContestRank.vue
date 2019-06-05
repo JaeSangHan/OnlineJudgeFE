@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <Panel shadow>
     <div slot="title">{{ contest.title }}</div>
     <div slot="extra">
@@ -73,7 +73,7 @@
             }
           },
           {
-            title: '사용자',
+            title: 'User',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -94,7 +94,7 @@
             }
           },
           {
-            title: '정답률 / 푼 문제',
+            title: 'AC / Total',
             align: 'center',
             width: 100,
             render: (h, params) => {
@@ -114,7 +114,7 @@
             }
           },
           {
-            title: '총 시간',
+            title: 'TotalTime',
             align: 'center',
             render: (h, params) => {
               return h('span', this.parseTotalTime(params.row.total_time))
