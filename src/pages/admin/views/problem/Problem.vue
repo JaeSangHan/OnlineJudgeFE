@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="problem">
 
     <Panel :title="title">
@@ -6,7 +6,7 @@
         <el-row :gutter="20">
           <el-col :span="6">
             <el-form-item prop="_id" :label="$t('m.Display_ID')"
-                          :required="this.routeName === 'create-contest-problem' || this.routeName === 'edit-contest-problem'">
+                          :required="this.routeName === 'create-contest-problem' || this.routeName === 'edit-contet-problem'">
               <el-input :placeholder="$t('m.Display_ID')" v-model="problem._id"></el-input>
             </el-form-item>
           </el-col>
@@ -49,27 +49,18 @@
           <el-col :span="8">
             <el-form-item :label="$t('m.Difficulty')">
               <el-select class="difficulty-select" size="small" :placeholder="$t('m.Difficulty')" v-model="problem.difficulty">
-                <el-option label="Low" value="Low"></el-option>
-                <el-option label="Mid" value="Mid"></el-option>
-                <el-option label="High" value="High"></el-option>
+                <el-option label="쉬움" value="쉬움"></el-option>
+                <el-option label="보통" value="보통"></el-option>
+                <el-option label="어려움" value="어려움"></el-option>
               </el-select>
             </el-form-item>
           </el-col>
         </el-row>
         <el-row :gutter="20">
-          <el-col :span="4">
+          <el-col :span="6">
             <el-form-item :label="$t('m.Visible')">
               <el-switch
                 v-model="problem.visible"
-                active-text=""
-                inactive-text="">
-              </el-switch>
-            </el-form-item>
-          </el-col>
-          <el-col :span="4">
-            <el-form-item :label="$t('m.ShareSubmission')">
-              <el-switch
-                v-model="problem.share_submission"
                 active-text=""
                 inactive-text="">
               </el-switch>
@@ -186,7 +177,7 @@
           </Accordion>
         </el-form-item>
         <el-row :gutter="20">
-          <el-col :span="4">
+          <el-col :span="6">
             <el-form-item :label="$t('m.Type')">
               <el-radio-group v-model="problem.rule_type" :disabled="disableRuleType">
                 <el-radio label="ACM">ACM</el-radio>
@@ -194,7 +185,7 @@
               </el-radio-group>
             </el-form-item>
           </el-col>
-          <el-col :span="6">
+          <el-col :span="12">
             <el-form-item :label="$t('m.TestCase')" :error="error.testcase">
               <el-upload
                 action="/api/admin/test_case"
@@ -205,26 +196,6 @@
                 :on-error="uploadFailed">
                 <el-button size="small" type="primary" icon="el-icon-fa-upload">Choose File</el-button>
               </el-upload>
-            </el-form-item>
-          </el-col>
-
-          <el-col :span="6">
-            <el-form-item :label="$t('m.IOMode')">
-              <el-radio-group v-model="problem.io_mode.io_mode">
-                <el-radio label="Standard IO">Standard IO</el-radio>
-                <el-radio label="File IO">File IO</el-radio>
-              </el-radio-group>
-            </el-form-item>
-          </el-col>
-
-          <el-col :span="4" v-if="problem.io_mode.io_mode == 'File IO'">
-            <el-form-item :label="$t('m.InputFileName')" required>
-              <el-input type="text" v-model="problem.io_mode.input"></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="4" v-if="problem.io_mode.io_mode == 'File IO'">
-            <el-form-item :label="$t('m.OutputFileName')" required>
-              <el-input type="text" v-model="problem.io_mode.output"></el-input>
             </el-form-item>
           </el-col>
 
@@ -290,12 +261,10 @@
         mode: '',
         contest: {},
         problem: {
-          languages: [],
-          io_mode: {'io_mode': 'Standard IO', 'input': 'input.txt', 'output': 'output.txt'}
+          languages: []
         },
         reProblem: {
-          languages: [],
-          io_mode: {'io_mode': 'Standard IO', 'input': 'input.txt', 'output': 'output.txt'}
+          languages: []
         },
         testCaseUploaded: false,
         allLanguage: {},
@@ -330,9 +299,8 @@
           output_description: '',
           time_limit: 1000,
           memory_limit: 256,
-          difficulty: 'Low',
+          difficulty: '쉬움',
           visible: true,
-          share_submission: false,
           tags: [],
           languages: [],
           template: {},
@@ -345,8 +313,7 @@
           test_case_score: [],
           rule_type: 'ACM',
           hint: '',
-          source: '',
-          io_mode: {'io_mode': 'Standard IO', 'input': 'input.txt', 'output': 'output.txt'}
+          source: ''
         }
         let contestID = this.$route.params.contestId
         if (contestID) {
@@ -471,7 +438,7 @@
         let fileList = response.data.info
         for (let file of fileList) {
           file.score = (100 / fileList.length).toFixed(0)
-          if (!file.output_name && this.problem.spj) {
+          if (this.problem.spj) {
             file.output_name = '-'
           }
         }

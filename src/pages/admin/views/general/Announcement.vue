@@ -84,7 +84,7 @@
           <Simditor v-model="announcement.content"></Simditor>
         </el-form-item>
         <div class="visible-box">
-          <span>{{$t('m.Announcement_visible')}}</span>
+          <span>{{$t('m.Announcement_Status')}}</span>
           <el-switch
             v-model="announcement.visible"
             active-text=""
@@ -217,7 +217,6 @@
           cancelButtonText: 'Cancel',
           type: 'warning'
         }).then(() => {
-          // then 为确定
           this.loading = true
           let funcName = this.contestID ? 'deleteContestAnnouncement' : 'deleteAnnouncement'
           api[funcName](announcementId).then(res => {
@@ -225,8 +224,7 @@
             this.init()
           })
         }).catch(() => {
-          // catch 为取消
-          this.loading = false
+          this.loading = true
         })
       },
       openAnnouncementDialog (id) {
