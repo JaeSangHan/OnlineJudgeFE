@@ -137,8 +137,8 @@
             render: (h, params) => {
               let t = params.row.difficulty
               let color = 'blue'
-              if (t === '쉬움') color = 'green'
-              else if (t === '어려움') color = 'yellow'
+              if (t === 'Low') color = 'green'
+              else if (t === 'High') color = 'yellow'
               return h('Tag', {
                 props: {
                   color: color
