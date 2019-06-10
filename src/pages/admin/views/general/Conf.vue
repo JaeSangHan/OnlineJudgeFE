@@ -26,7 +26,9 @@
           <el-col :span="24">
             <el-form-item label="TLS">
               <el-switch
-                v-model="smtp.tls">
+                v-model="smtp.tls"
+                active-color="#13ce66"
+                inactive-color="#ff4949">
               </el-switch>
             </el-form-item>
           </el-col>
