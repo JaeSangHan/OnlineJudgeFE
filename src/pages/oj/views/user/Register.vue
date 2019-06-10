@@ -1,4 +1,4 @@
-﻿<template>
+<template>
 <div>
     <Form ref="formRegister" :model="formRegister" :rules="ruleRegister">
       <FormItem prop="username">
@@ -68,7 +68,7 @@
       const CheckUsernameNotExist = (rule, value, callback) => {
         api.checkUsernameOrEmail(value, undefined).then(res => {
           if (res.data.data.username === true) {
-            callback(new Error('이미 존재하는 닉네임입니다.'))
+            callback(new Error('The username already exists.'))
           } else {
             callback()
           }
@@ -77,7 +77,7 @@
       const CheckEmailNotExist = (rule, value, callback) => {
         api.checkUsernameOrEmail(undefined, value).then(res => {
           if (res.data.data.email === true) {
-            callback(new Error('이미 존재하는 이메일입니다.'))
+            callback(new Error('The email already exists'))
           } else {
             callback()
           }
@@ -93,7 +93,7 @@
 
       const CheckAgainPassword = (rule, value, callback) => {
         if (value !== this.formRegister.password) {
-          callback(new Error('비빌번호가 일치하지 않습니다.'))
+          callback(new Error('password does not match'))
         }
         callback()
       }
@@ -143,7 +143,7 @@
           delete formData['passwordAgain']
           this.btnRegisterLoading = true
           api.register(formData).then(res => {
-            this.$success('환영합니다! 바로 로그인하실 수 있습니다.')
+            this.$success('Thanks for your registering, you can login now')
             this.switchMode('login')
             this.btnRegisterLoading = false
           }, _ => {
