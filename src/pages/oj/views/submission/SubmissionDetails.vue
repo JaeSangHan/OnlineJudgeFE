@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <Row type="flex" justify="space-around">
     <Col :span="20" id="status">
       <Alert :type="status.type" showIcon>
@@ -38,6 +38,7 @@
       </div>
     </Col>
   </Row>
+
 </template>
 
 <script>
@@ -48,12 +49,12 @@
 
   const baseColumn = [
     {
-      title: '번호',
+      title: 'ID',
       align: 'center',
       type: 'index'
     },
     {
-      title: '상태',
+      title: 'Status',
       align: 'center',
       render: (h, params) => {
         return h('Tag', {
@@ -64,14 +65,14 @@
       }
     },
     {
-      title: '메모리',
+      title: 'Memory',
       align: 'center',
       render: (h, params) => {
         return h('span', utils.submissionMemoryFormat(params.row.memory))
       }
     },
     {
-      title: '시간',
+      title: 'Time',
       align: 'center',
       render: (h, params) => {
         return h('span', utils.submissionTimeFormat(params.row.cpu_time))
@@ -79,20 +80,20 @@
     }
   ]
   const scoreColumn = [{
-    title: '점수',
+    title: 'Score',
     align: 'center',
     key: 'score'
   }]
   const adminColumn = [
     {
-      title: '실시간',
+      title: 'Real Time',
       align: 'center',
       render: (h, params) => {
         return h('span', utils.submissionTimeFormat(params.row.real_time))
       }
     },
     {
-      title: '신호',
+      title: 'Singal',
       align: 'center',
       key: 'signal'
     }
@@ -133,7 +134,7 @@
           let columns = baseColumn
           if (data.info && data.info.data && !this.isConcat) {
             // score exist means the submission is OI problem submission
-            if (data.info.data[0].score) {
+            if (data.info.data[0].score !== undefined) {
               this.isConcat = true
               columns = columns.concat(scoreColumn)
             }
