@@ -1,8 +1,8 @@
-﻿<template>
+<template>
   <Row type="flex" justify="space-around">
     <Col :span="22">
     <Panel :padding="10">
-      <div slot="title">ACM 랭킹 (일반)</div>
+      <div slot="title">ACM Ranklist</div>
       <div class="echarts">
         <ECharts :options="options" ref="chart" auto-resize></ECharts>
       </div>
@@ -42,7 +42,7 @@
             }
           },
           {
-            title: '닉네임',
+            title: 'user',
             align: 'center',
             render: (h, params) => {
               return h('a', {
@@ -63,22 +63,22 @@
             }
           },
           {
-            title: '상태메세지',
+            title: 'mood',
             align: 'center',
             key: 'mood'
           },
           {
-            title: '정답',
+            title: 'AC',
             align: 'center',
             key: 'accepted_number'
           },
           {
-            title: '제출',
+            title: 'Total',
             align: 'center',
             key: 'submission_number'
           },
           {
-            title: '정확도',
+            title: 'Rating',
             align: 'center',
             render: (h, params) => {
               return h('span', utils.getACRate(params.row.accepted_number, params.row.submission_number))
@@ -90,7 +90,7 @@
             trigger: 'axis'
           },
           legend: {
-            data: ['정답', '제출']
+            data: ['AC', 'Total']
           },
           grid: {
             x: '3%',

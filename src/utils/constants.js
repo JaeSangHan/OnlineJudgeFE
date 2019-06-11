@@ -1,70 +1,70 @@
-﻿export const JUDGE_STATUS = {
+export const JUDGE_STATUS = {
   '-2': {
-    name: '컴파일 에러',
+    name: 'Compile Error',
     short: 'CE',
     color: 'yellow',
     type: 'warning'
   },
   '-1': {
-    name: '잘못된 풀이',
+    name: 'Wrong Answer',
     short: 'WA',
     color: 'red',
     type: 'error'
   },
   '0': {
-    name: '정확한풀이',
+    name: 'Accepted',
     short: 'AC',
     color: 'green',
     type: 'success'
   },
   '1': {
-    name: '시간초과',
+    name: 'Time Limit Exceeded',
     short: 'TLE',
     color: 'red',
     type: 'error'
   },
   '2': {
-    name: '시간초과',
+    name: 'Time Limit Exceeded',
     short: 'TLE',
     color: 'red',
     type: 'error'
   },
   '3': {
-    name: '메모리초과',
+    name: 'Memory Limit Exceeded',
     short: 'MLE',
     color: 'red',
     type: 'error'
   },
   '4': {
-    name: '런타임 에러',
+    name: 'Runtime Error',
     short: 'RE',
     color: 'red',
     type: 'error'
   },
   '5': {
-    name: '시스템 에러',
+    name: 'System Error',
     short: 'SE',
     color: 'red',
     type: 'error'
   },
   '6': {
-    name: '처리중',
+    name: 'Pending',
     color: 'yellow',
     type: 'warning'
   },
   '7': {
-    name: '채점중',
+    name: 'Judging',
     color: 'blue',
     type: 'info'
   },
   '8': {
-    name: '부분 정답',
+    name: 'Partial Accepted',
     short: 'PAC',
     color: 'blue',
     type: 'info'
   },
   '9': {
-    name: '제출중',
+    name: 'Submitting',
     color: 'yellow',
     type: 'warning'
   }
@@ -78,15 +78,15 @@ export const CONTEST_STATUS = {
 
 export const CONTEST_STATUS_REVERSE = {
   '1': {
-    name: '진행예정',
+    name: 'Not Started',
     color: 'yellow'
   },
   '0': {
-    name: '진행중',
+    name: 'Underway',
     color: 'green'
   },
   '-1': {
-    name: '종료됨',
+    name: 'Ended',
     color: 'red'
   }
 }
@@ -97,8 +97,8 @@ export const RULE_TYPE = {
 }
 
 export const CONTEST_TYPE = {
-  PUBLIC: '공개',
-  PRIVATE: '패스워드'
+  PUBLIC: 'Public',
+  PRIVATE: 'Password Protected'
 }
 
 export const USER_TYPE = {

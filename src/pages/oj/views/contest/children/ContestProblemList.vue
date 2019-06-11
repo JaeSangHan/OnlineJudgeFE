@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div>
     <Panel>
       <div slot="title">{{$t('m.Problems_List')}}</div>
@@ -33,15 +33,15 @@
             width: 150
           },
           {
-            title: '제목',
+            title: 'Title',
             key: 'title'
           },
           {
-            title: '제출',
+            title: 'Total',
             key: 'submission_number'
           },
           {
-            title: '정답률',
+            title: 'AC Rate',
             render: (h, params) => {
               return h('span', this.getACRate(params.row.accepted_number, params.row.submission_number))
             }
