@@ -117,7 +117,7 @@
 
         <VerticalMenu-item v-if="!this.contestID || OIContestRealTimePermission" :route="submissionRoute">
           <Icon type="navicon-round"></Icon>
-          제출기록
+          {{$t('m.Submissions')}}
         </VerticalMenu-item>
 
         <template v-if="this.contestID">
