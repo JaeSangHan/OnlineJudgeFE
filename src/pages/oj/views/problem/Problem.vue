@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="flex-container">
     <div id="problem-main">
       <!--problem main-->
@@ -117,7 +117,7 @@
 
         <VerticalMenu-item v-if="!this.contestID || OIContestRealTimePermission" :route="submissionRoute">
           <Icon type="navicon-round"></Icon>
-          Submissions
+          제출기록
         </VerticalMenu-item>
 
         <template v-if="this.contestID">
