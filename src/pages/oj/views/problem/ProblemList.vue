@@ -12,9 +12,9 @@
               </span>
               <Dropdown-menu slot="list">
                 <Dropdown-item name="">All</Dropdown-item>
-                <Dropdown-item name="쉬움">Low</Dropdown-item>
-                <Dropdown-item name="보통">Mid</Dropdown-item>
-                <Dropdown-item name="어려움">High</Dropdown-item>
+                <Dropdown-item name="Low">쉬움</Dropdown-item>
+                <Dropdown-item name="Mid">보통</Dropdown-item>
+                <Dropdown-item name="High">어려움</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
