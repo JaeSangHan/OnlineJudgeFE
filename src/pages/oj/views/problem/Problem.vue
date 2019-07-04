@@ -67,17 +67,17 @@
                 </Tag>
               </template>
               <template v-else-if="this.contestID && !OIContestRealTimePermission">
-                <Alert type="success" show-icon>Submitted successfully</Alert>
+                <Alert type="success" show-icon>성공적으로 제출되었습니다</Alert>
               </template>
             </div>
             <div v-else-if="problem.my_status === 0">
-              <Alert type="success" show-icon>You have solved the problem</Alert>
+              <Alert type="success" show-icon>이미 이 문제를 풀었습니다!</Alert>
             </div>
             <div v-else-if="this.contestID && !OIContestRealTimePermission && submissionExists">
               <Alert type="success" show-icon>You have submitted a solution.</Alert>
             </div>
             <div v-if="contestEnded">
-              <Alert type="warning" show-icon>Contest has ended</Alert>
+              <Alert type="warning" show-icon>대회가 종료되었습니다</Alert>
             </div>
           </Col>
 
@@ -93,8 +93,8 @@
             <Button type="warning" icon="edit" :loading="submitting" @click="submitCode"
                     :disabled="problemSubmitDisabled || submitted"
                     class="fl-right">
-              <span v-if="submitting">Submitting</span>
-              <span v-else>Submit</span>
+              <span v-if="submitting">제출중</span>
+              <span v-else>제출</span>
             </Button>
           </Col>
         </Row>
@@ -179,7 +179,7 @@
       <Card id="pieChart" :padding="0" v-if="!this.contestID || OIContestRealTimePermission">
         <div slot="title">
           <Icon type="ios-analytics"></Icon>
-          <span class="card-title">Statistic</span>
+          <span class="card-title">통계</span>
           <Button type="ghost" size="small" id="detail" @click="graphVisible = !graphVisible">Details</Button>
         </div>
         <div class="echarts">
@@ -359,7 +359,7 @@
       },
       onResetToTemplate () {
         this.$Modal.confirm({
-          content: 'Are you sure you want to reset your code?',
+          content: '정말로 코드를 초기화하시겠습니까?',
           onOk: () => {
             let template = this.problem.template
             if (template && template[this.language]) {

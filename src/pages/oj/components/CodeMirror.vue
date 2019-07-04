@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div style="margin: 0px 0px 15px 0px">
     <Row type="flex" justify="space-between" class="header">
       <Col :span=12>
@@ -9,11 +9,11 @@
           </Option>
         </Select>
 
-        <Tooltip content="Reset to default code definition" placement="top" style="margin-left: 10px">
+        <Tooltip content="코드 초기화" placement="top" style="margin-left: 10px">
           <Button icon="refresh" @click="onResetClick"></Button>
         </Tooltip>
 
-        <Tooltip content="Upload file" placement="top" style="margin-left: 10px">
+        <Tooltip content="파일 업로드" placement="top" style="margin-left: 10px">
           <Button icon="upload" @click="onUploadFile"></Button>
         </Tooltip>
 
@@ -23,7 +23,7 @@
       </Col>
       <Col :span=12>
       <div class="fl-right">
-        <span>Theme:</span>
+        <span>테마:</span>
         <Select :value="theme" @on-change="onThemeChange" class="adjust">
           <Option v-for="item in themes" :key="item.label" :value="item.value">{{item.label}}
           </Option>
