@@ -81,7 +81,7 @@ const getters = {
       let duration = moment.duration(getters.contestStartTime.diff(state.now, 'seconds'), 'seconds')
       // time is too long
       if (duration.weeks() > 0) {
-        return '대회 시작까지 ' + duration.humanize() + '남음'
+        return '대회 시작까지 ' + duration.humanize()
       }
       let texts = [Math.floor(duration.asHours()), duration.minutes(), duration.seconds()]
       return '-' + texts.join(':')
