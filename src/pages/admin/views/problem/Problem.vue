@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="problem">
 
     <Panel :title="title">
@@ -51,7 +51,7 @@
               <el-select class="difficulty-select" size="small" :placeholder="$t('m.Difficulty')" v-model="problem.difficulty">
                 <el-option label="Low" value="Low"></el-option>
                 <el-option label="Mid" value="Mid"></el-option>
-                <el-option label="Hell" value="Hell"></el-option>
+                <el-option label="High" value="High"></el-option>
               </el-select>
             </el-form-item>
           </el-col>
