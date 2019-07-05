@@ -14,7 +14,7 @@
                 <Dropdown-item name="">All</Dropdown-item>
                 <Dropdown-item name="Low">쉬움</Dropdown-item>
                 <Dropdown-item name="Mid">보통</Dropdown-item>
-                <Dropdown-item name="High">어려움</Dropdown-item>
+                <Dropdown-item name="Hell">Hell</Dropdown-item>
               </Dropdown-menu>
             </Dropdown>
           </li>
@@ -138,7 +138,7 @@
               let t = params.row.difficulty
               let color = 'blue'
               if (t === 'Low') color = 'green'
-              else if (t === 'High') color = 'yellow'
+              else if (t === 'Hell') color = 'yellow'
               return h('Tag', {
                 props: {
                   color: color
