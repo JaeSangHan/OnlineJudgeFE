@@ -1,4 +1,4 @@
-import moment from 'moment'
+﻿import moment from 'moment'
 import types from '../types'
 import api from '@oj/api'
 import { CONTEST_STATUS, USER_TYPE, CONTEST_TYPE } from '@/utils/constants'
@@ -81,7 +81,7 @@ const getters = {
       let duration = moment.duration(getters.contestStartTime.diff(state.now, 'seconds'), 'seconds')
       // time is too long
       if (duration.weeks() > 0) {
-        return 'Start At ' + duration.humanize()
+        return '대회 시작까지 ' + duration.humanize() + '남음'
       }
       let texts = [Math.floor(duration.asHours()), duration.minutes(), duration.seconds()]
       return '-' + texts.join(':')
