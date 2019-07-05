@@ -21,9 +21,9 @@
               <div v-html="contest.description" class="markdown-body"></div>
               <div v-if="passwordFormVisible" class="contest-password">
                 <Input v-model="contestPassword" type="password"
-                       placeholder="contest password" class="contest-password-input"
+                       placeholder="대회 비밀번호" class="contest-password-input"
                        @on-enter="checkPassword"/>
-                <Button type="info" @click="checkPassword">Enter</Button>
+                <Button type="info" @click="checkPassword">입장</Button>
               </div>
             </Panel>
             <Table :columns="columns" :data="contest_table" disabled-hover style="margin-bottom: 40px;"></Table>
@@ -144,12 +144,12 @@
       },
       checkPassword () {
         if (this.contestPassword === '') {
-          this.$error('Password can\'t be empty')
+          this.$error('비밀번호는 공백일 수 없습니다')
           return
         }
         this.btnLoading = true
         api.checkContestPassword(this.contestID, this.contestPassword).then((res) => {
-          this.$success('Succeeded')
+          this.$success('입장 성공!')
           this.$store.commit(types.CONTEST_ACCESS, {access: true})
           this.btnLoading = false
         }, (res) => {

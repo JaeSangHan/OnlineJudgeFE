@@ -33,7 +33,7 @@
   Announcements: '공지사항',
   Submissions: '제출',
   Rankings: '랭킹',
-  Overview: '개요',
+  Overview: '대회 개요',
   Admin_Helper: '관리자 전용',
   // ContestProblemList
   Problems_List: '문제 목록',
