@@ -26,7 +26,7 @@
               </i-switch>
             </li>
             <li>
-              <Input v-model="formFilter.username" placeholder="Search Author" @on-enter="handleQueryChange"/>
+              <Input v-model="formFilter.username" placeholder="ID 검색" @on-enter="handleQueryChange"/>
             </li>
 
             <li>
@@ -148,7 +148,7 @@
             key: 'language'
           },
           {
-            title: '만든이',
+            title: '사용자',
             align: 'center',
             render: (h, params) => {
               return h('a', {

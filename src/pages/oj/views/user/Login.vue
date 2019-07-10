@@ -86,7 +86,7 @@
             this.btnLoginLoading = false
             this.changeModalStatus({visible: false})
             this.getProfile()
-            this.$success('코이업에 오신 것을 환영합니다.')
+            this.$success('성공적으로 로그인 되었습니다.')
           }, _ => {
             this.btnLoginLoading = false
           })
