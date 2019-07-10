@@ -89,10 +89,10 @@
           <Form-item label="상태메세지">
             <Input v-model="formProfile.mood"/>
           </Form-item>
-          <Form-item label="블로그">
+          <Form-item label="블로그 주소">
             <Input v-model="formProfile.blog"/>
           </Form-item>
-          <Form-item label="깃허브">
+          <Form-item label="깃허브 주소">
             <Input v-model="formProfile.github"/>
           </Form-item>
         </Col>

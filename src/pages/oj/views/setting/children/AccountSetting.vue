@@ -28,7 +28,7 @@
       <div class="right">
         <p class="section-title">{{$t('m.ChangeEmail')}}</p>
         <Form class="setting-content" ref="formEmail" :model="formEmail" :rules="ruleEmail">
-          <FormItem label="Current Password" prop="password">
+          <FormItem label="현재 비밀번호" prop="password">
             <Input v-model="formEmail.password" type="password"/>
           </FormItem>
           <FormItem label="이전 이메일">
