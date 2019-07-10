@@ -94,7 +94,7 @@
             }
           },
           {
-            title: '정답률 / 푼 문제',
+            title: '정답률 / 제출',
             align: 'center',
             width: 100,
             render: (h, params) => {
@@ -124,7 +124,7 @@
         dataRank: [],
         options: {
           title: {
-            text: 'Top 10 Teams',
+            text: 'Top 10',
             left: 'center'
           },
           dataZoom: [

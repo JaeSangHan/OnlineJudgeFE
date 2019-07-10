@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div id="header">
     <Menu theme="light" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
       <div class="logo"><span>{{website.website_name}}</span></div>
@@ -73,7 +73,7 @@
       </template>
     </Menu>
     <Modal v-model="modalVisible" :width="400">
-      <div slot="header" class="modal-title">Welcome to {{website.website_name_shortcut}}</div>
+      <div slot="header" class="modal-title">{{website.website_name_shortcut}}에 오신걸 환영합니다!</div>
       <component :is="modalStatus.mode" v-if="modalVisible"></component>
       <div slot="footer" style="display: none"></div>
     </Modal>
